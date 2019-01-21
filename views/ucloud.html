@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>XX爬虫监控平台</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="XX爬虫监控平台"/>
+
+
+    <!--  Social tags      -->
+    <meta name="keywords" content="XX爬虫监控平台">
+
+    <meta name="description" content="XX爬虫监控平台">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="XX爬虫监控平台">
+    <meta itemprop="description" content="XX爬虫监控平台">
+
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="XX爬虫监控平台"/>
+    <meta property="og:type" content="XX爬虫监控平台"/>
+
+    <meta property="og:description" content="XX爬虫监控平台"/>
+    <meta property="og:site_name" content="XX爬虫监控平台"/>
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--  Light Bootstrap Dashboard core CSS    -->
+    <link href="../public/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../public/css/demo.css" rel="stylesheet"/>
+
+
+    <!--     Fonts and icons     -->
+    <link href="../public/css/font-awesome.min.css" rel="stylesheet">
+    <link href='../public/css/685fd913f1e14aebad0cc9d3713ee469.css' rel='stylesheet' type='text/css'>
+    <link href="../public/css/pe-icon-7-stroke.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="orange" data-image="../../assets/img/full-screen-image-3.jpg">
+        <div class="sidebar-wrapper">
+            <div class="user">
+                <div class="photo">
+                    <img src="../public/picture/default-avatar.png"/>
+                </div>
+            </div>
+
+            <ul class="nav">
+
+                <li>
+                    <a href="taskList.html">
+                        <i class="pe-7s-albums"></i>
+                        <p>任务列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="workerList.html">
+                        <i class="pe-7s-refresh-2"></i>
+                        <p>worker列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="workerRunningList.html">
+                        <i class="pe-7s-next"></i>
+                        <p>worker状态列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#tablesExamples1">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>app支持列表
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="tablesExamples1">
+                        <ul class="nav">
+                            <li><a href="#"> 淘宝</a></li>
+                            <li><a href="#"> 拼多多</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="active">
+                    <a href="apiReportList.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>api监控统计</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="capacha.html">
+                        <i class="pe-7s-camera"></i>
+                        <p>验证码服务</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#proxyExamples">
+                        <i class="pe-7s-disk"></i>
+                        <p>代理服务
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="proxyExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 西刺代理</a></li>
+                            <li><a href="#"> 阿里代理</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-volume"></i>
+                        <p>预警通知列表</p>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="ucloud.html">
+                        <i class="pe-7s-network"></i>
+                        <p>vhost列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#componentsExamples">
+                        <i class="pe-7s-add-user"></i>
+                        <p>用户管理
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="componentsExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 用户模块</a></li>
+                            <li><a href="#"> 用户监控</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-minimize">
+                    <button id="minimizeSidebar" class="btn btn-warning btn-fill btn-round btn-icon">
+                        <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                        <i class="fa fa-navicon visible-on-sidebar-mini"></i>
+                    </button>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">虚拟容器列表</a>
+                </div>
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown dropdown-with-icons">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-list"></i>
+                                <p class="hidden-md hidden-lg">
+                                    更多
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-with-icons">
+                                <li>
+                                    <a href="#" onclick="loginOut()" class="text-danger">
+                                        <i class="pe-7s-close-circle"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="toolbar">
+                                <!--        Here you can write extra buttons/actions for the toolbar              -->
+                            </div>
+                            <input type="hidden" id="monitorHost" value=<%= MONITOR_HOST %>
+                            <table id="bootstrap-table" class="table table-striped table-no-bordered table-hover">
+                                <thead>
+                                <th data-field="first"></th>
+                                <th data-field="uhostId" data-sortable="true">UHostId</th>
+                                <th data-field="hostName" data-sortable="true">HostName</th>
+                                <th data-field="state" data-sortable="true">网络状况</th>
+                                <th data-field="cpu" data-sortable="true">CPU</th>
+                                <th data-field="memory" data-sortable="true">内存</th>
+                                <th data-field="bgpIp" data-sortable="true">公网IP</th>
+                                <th data-field="privateIp" data-sortable="true">内网IP</th>
+                                <th data-field="networkState" data-sortable="true">状态</th>
+                                <th data-field="action">操作</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div><!--  end card  -->
+                    </div> <!-- end col-md-12 -->
+                </div> <!-- end row -->
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<!--  Forms Validations Plugin -->
+<script src="/js/jquery.validate.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="/js/moment.min.js"></script>
+
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="/js/bootstrap-datetimepicker.js"></script>
+
+<!--  Select Picker Plugin -->
+<script src="/js/bootstrap-selectpicker.js"></script>
+
+<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+<script src="/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+<!--  Charts Plugin -->
+<script src="/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="/js/bootstrap-notify.js"></script>
+
+<!-- Sweet Alert 2 plugin -->
+<script src="/js/sweetalert2.js"></script>
+
+<!-- Vector Map plugin -->
+<script src="/js/jquery-jvectormap.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script src="/js/aa743e8f448a4792bad10d201a7080f6.js"></script>
+
+<!-- Wizard Plugin    -->
+<script src="/js/jquery.bootstrap.wizard.min.js"></script>
+
+<!--  Bootstrap Table Plugin    -->
+<script src="/js/bootstrap-table.js"></script>
+
+<!--  Plugin for DataTables.net  -->
+<script src="/js/jquery.datatables.js"></script>
+
+<!--  Full Calendar Plugin    -->
+<script src="/js/fullcalendar.min.js"></script>
+
+<!-- Light Bootstrap Dashboard Core javascript and methods -->
+<script src="/js/light-bootstrap-dashboard.js"></script>
+
+<!--   Sharrre Library    -->
+<script src="/js/jquery.sharrre.js"></script>
+
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="/js/demo.js"></script>
+
+
+<script type="text/javascript">
+    var $table = $('#bootstrap-table');
+    var monitorHost = $('#monitorHost').val();
+    function operateFormatter(value, row, index) {
+        return [
+            '<a rel="tooltip" title="编辑" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+            '<i class="fa fa-edit"></i>',
+            '</a>',
+            '<a rel="tooltip" title="删除" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+            '<i class="fa fa-remove"></i>',
+            '</a>'
+
+        ].join('');
+    }
+
+    $().ready(function () {
+        window.operateEvents = {};
+
+        $table.bootstrapTable({
+            toolbar: ".toolbar",
+            clickToSelect: true,
+            showRefresh: false,
+            search: false,
+            showToggle: false,
+            showColumns: false,
+            pagination: true,
+            searchAlign: 'left',
+            pageSize: 10,
+            clickToSelect: false,
+            pageList: [10, 20, 30, 50, 100],
+
+            formatShowingRows: function (pageFrom, pageTo, totalRows) {
+                return "共 <strong>" + totalRows + "</strong> 条 记 录    "
+            },
+            formatRecordsPerPage: function (pageNumber) {
+                return pageNumber + " 条 / 页";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+
+        //activate the tooltips after the data table is initialized
+        $('[rel="tooltip"]').tooltip();
+
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+        });
+
+    });
+</script>
+<script>
+    $().ready(function () {
+        getUcloudList();
+    });
+
+    function getUcloudList() {
+        var url = monitorHost+"monitor/metrics/ucloudList";
+        $.ajax({
+            type: "get",
+            async: true,
+            dataTypt: 'json',
+            cache: 'false',
+            url: url,
+            timeout: 10000,
+            success: function (datas) {
+                component(datas);
+            },
+            error: function () {
+                swal({
+                    showConfirmButton: false,
+                    title: "接口出错了！",
+                    type: "error",
+                });
+            }
+        });
+    }
+
+    function component(tableData) {
+        var tableHtml = ''
+        var middle = ''
+        var middle2 = ''
+        var statusHtml = ''
+        var netStateHtml = ''
+        tableData = JSON.parse(tableData);
+        if(tableData.length>0){
+            for (var i = 0; i < tableData.length; i++) {
+                var targetUrl = monitorHost+"monitor/metrics/ucloudChange?";
+                middle = '<tr>\n' +
+                    '                                    <td><font color="#808080">'+(i+1)+'</font></td>\n' +
+                    '                                    <td id="uhostId"><strong>' + tableData[i].uhostId + '</strong></td>\n' +
+                    '                                    <td id="hostName"><strong>' + tableData[i].hostName + '</strong></td>\n'
+                if (tableData[i].networkState === 'Connected') {
+                    netStateHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-success btn-round btn-fill" style="">\n' +
+                        '                                            <span> 连接</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n'
+                } else if (tableData[i].networkState === 'NotConnected') {
+                    netStateHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-warning btn-round btn-fill" style="">\n' +
+                        '                                            <span> 断开</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n'
+                }
+                middle2 =
+                    '                                    <td id="cpu">' + tableData[i].cpu + '核</td>\n' +
+                    '                                    <td id="memory">' + tableData[i].memory + 'M</td>\n' +
+                    '                                    <td id="bgpIp">' + tableData[i].bgpIp + '</td>\n' +
+                    '                                    <td id="privateIp">' + tableData[i].privateIp + '</td>\n';
+
+
+                if (tableData[i].state === 'Running') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-success btn-round btn-fill" style="">\n' +
+                        '                                            <span> 运行中</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                           <td>\n' +
+                        '                            <button type="button" class="btn" onclick=workerOption("' + targetUrl + 'ucloudId=' + tableData[i].uhostId + '","status'+i+'")>\n' +
+                        '          <span id="status'+i+'">&#8635;切换IP</span> \n' +
+                        '        </button>' +
+                        '                            </td>\n' +
+                        '                                </tr>'
+                } else if (tableData[i].state === 'Stopping') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-warning btn-round btn-fill" style="">\n' +
+                        '                                            <span> 关机中</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                                </tr>'
+                } else if (tableData[i].state === 'Initializing') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-danger btn-round btn-fill" style="">\n' +
+                        '                                            <span> 初始化</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                                </tr>'
+                } else if (tableData[i].state === 'stopped') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-danger btn-round btn-fill" style="">\n' +
+                        '                                            <span> 关机</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                                </tr>'
+                } else if (tableData[i].state === 'Install Fail') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-danger btn-round btn-fill" style="">\n' +
+                        '                                            <span> 安装失败</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                                </tr>'
+                } else if (tableData[i].status === 'Rebooting') {
+                    statusHtml =
+                        '                           <td>\n' +
+                        '                                        <button class="btn btn-danger btn-round btn-fill" style="">\n' +
+                        '                                            <span> 重启中</span>\n' +
+                        '                                        </button>\n' +
+                        '                                    </td>\n' +
+                        '                                </tr>'
+                }else{
+                    swal({
+                        showConfirmButton: false,
+                        title: "worker状态类型错误！",
+                        type: "error",
+                    });
+                }
+                tableHtml += middle +netStateHtml+ middle2 +statusHtml;
+            }
+            $("tbody").html(tableHtml);
+        }
+    }
+
+    function workerOption(targetUrl,statusId) {
+        var option = targetUrl.split('/')[5].split('?')[0];
+        var $table1 = $('#'+statusId);
+        $table1.text('正在切换');
+        $table1.parent().attr("class","btn btn-warning btn-round btn-fill");
+        $.ajax({
+            type: "get",
+            async: true,
+            cache: 'false',
+            url: targetUrl,
+            timeout: 10000,
+            success: function (datas) {
+                if(datas==='ok'){
+                    getUcloudList();
+//                    swal({
+//                        showConfirmButton: false,
+//                        title: "操作成功！刷新后查看新ip",
+//                        type: "success",
+//                    });
+                }else{
+                    swal({
+                        showConfirmButton: false,
+                        title: "操作失败！内部错误",
+                        type: "error",
+                    });
+                }
+            },
+            error: function () {
+                swal({
+                    showConfirmButton: false,
+                    title: "任务操作'+option+'接口出错了！",
+                    type: "error",
+                });
+            }
+        });
+    }
+
+    function loginOut() {
+        var url = monitorHost + "monitor/login";
+        window.location.href = url;
+    }
+
+</script>
+</html>

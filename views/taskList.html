@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>XX爬虫监控平台</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="XX爬虫监控平台"/>
+
+
+    <!--  Social tags      -->
+    <meta name="keywords" content="XX爬虫监控平台">
+
+    <meta name="description" content="XX爬虫监控平台">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="XX爬虫监控平台">
+    <meta itemprop="description" content="XX爬虫监控平台">
+
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="XX爬虫监控平台"/>
+    <meta property="og:type" content="XX爬虫监控平台"/>
+
+    <meta property="og:description" content="XX爬虫监控平台"/>
+    <meta property="og:site_name" content="XX爬虫监控平台"/>
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--  Light Bootstrap Dashboard core CSS    -->
+    <link href="../public/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../public/css/demo.css" rel="stylesheet"/>
+
+    <!--CSS for the range of date -->
+    <!--<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">-->
+    <link href="http://www.jq22.com/jquery/font-awesome.4.6.0.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="/css/daterangepicker-bs3.css"/>
+
+    <!--     Fonts and icons     -->
+    <link href="../public/css/font-awesome.min.css" rel="stylesheet">
+    <link href='../public/css/685fd913f1e14aebad0cc9d3713ee469.css' rel='stylesheet' type='text/css'>
+    <link href="../public/css/pe-icon-7-stroke.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="orange" data-image="../../assets/img/full-screen-image-3.jpg">
+        <div class="sidebar-wrapper">
+            <div class="user">
+                <div class="photo">
+                    <img src="../public/picture/default-avatar.png"/>
+                </div>
+            </div>
+
+            <ul class="nav">
+
+                <li class="active">
+                    <a href="taskList.html">
+                        <i class="pe-7s-albums"></i>
+                        <p>任务列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="workerList.html">
+                        <i class="pe-7s-refresh-2"></i>
+                        <p>worker列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="workerRunningList.html">
+                        <i class="pe-7s-next"></i>
+                        <p>worker状态列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#tablesExamples1">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>app支持列表
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="tablesExamples1">
+                        <ul class="nav">
+                            <li><a href="#"> 淘宝</a></li>
+                            <li><a href="#"> 拼多多</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="apiReportList.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>api监控统计</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="capacha.html">
+                        <i class="pe-7s-camera"></i>
+                        <p>验证码服务</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#proxyExamples">
+                        <i class="pe-7s-disk"></i>
+                        <p>代理服务
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="proxyExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 西刺代理</a></li>
+                            <li><a href="#"> 阿里代理</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-volume"></i>
+                        <p>预警通知列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ucloud.html">
+                        <i class="pe-7s-network"></i>
+                        <p>vhost列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#componentsExamples">
+                        <i class="pe-7s-add-user"></i>
+                        <p>用户管理
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="componentsExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 用户模块</a></li>
+                            <li><a href="#"> 用户监控</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-minimize">
+                    <button id="minimizeSidebar" class="btn btn-warning btn-fill btn-round btn-icon">
+                        <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                        <i class="fa fa-navicon visible-on-sidebar-mini"></i>
+                    </button>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">任务列表</a>
+                </div>
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown dropdown-with-icons">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-list"></i>
+                                <p class="hidden-md hidden-lg">
+                                    更多
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-with-icons">
+                                <li>
+                                    <a href="#" onclick="loginOut()" class="text-danger">
+                                        <i class="pe-7s-close-circle"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="row" style="padding-top: 10px;">
+                                <div class="col-xs-12">
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="taskId" placeholder="请输入任务ID"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="taskStatus" placeholder="请输入任务状态"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="account" placeholder="请输入账号"/>
+                                    </div>
+                                    <div class="col-xs-2" style="float: right">
+                                        <button class="btn btn-fill" id="searchBtn">查询</button>
+                                        <button class="btn btn-Default" id="resetBtn">重置</button>
+                                    </div>
+                                    <br/><br/><br/>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="appId" placeholder="请输入平台ID"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="nodeTask" placeholder="请输入任务节点"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="channel" placeholder="请输入通道"/>
+                                    </div>
+                                    <br/><br/><br/>
+
+                                    <form class="form-horizontal">
+                                        <fieldset>
+                                            <div class="control-group" style="margin-left: 15px;">
+                                                <div class="controls">
+                                                    <div class="input-prepend input-group">
+                                                        <span class="add-on input-group-addon">
+                                                            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                                        </span>
+                                                        <input readonly="readonly" type="text"
+                                                               style="width: 330px;background-color: white"
+                                                               name="reservation"
+                                                               id="reservationtime" class="form-control"
+                                                               placeholder="请选择任务开始时间"
+                                                               class="span4"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/><br/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="toolbar">
+                                <!--        Here you can write extra buttons/actions for the toolbar              -->
+                            </div>
+                            <input type="hidden" id="monitorHost" value=<%= MONITOR_HOST %>
+                            <input type="hidden" id="kibanaHost" value=<%= KIBANA_HOST %>
+                            <table id="bootstrap-table" class="table table-no-bordered table-hover">
+                            </table>
+                        </div><!--  end card  -->
+                    </div> <!-- end col-md-12 -->
+                </div> <!-- end row -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
+<script src="../public/js/jquery.min.js" type="text/javascript"></script>
+<script src="../public/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../public/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!--the range of date picker-->
+<script type="text/javascript" src="/js/moment.js">
+</script>
+<script type="text/javascript" src="/js/daterangepicker.js">
+</script>
+
+<!--  Forms Validations Plugin -->
+<script src="../public/js/jquery.validate.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../public/js/moment.min.js"></script>
+
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="../public/js/bootstrap-datetimepicker.js"></script>
+
+<!--  Select Picker Plugin -->
+<script src="../public/js/bootstrap-selectpicker.js"></script>
+
+<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+<script src="../public/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../public/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../public/js/bootstrap-notify.js"></script>
+
+<!-- Sweet Alert 2 plugin -->
+<script src="../public/js/sweetalert2.js"></script>
+
+<!-- Vector Map plugin -->
+<script src="../public/js/jquery-jvectormap.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script src="../public/js/aa743e8f448a4792bad10d201a7080f6.js"></script>
+
+<!-- Wizard Plugin    -->
+<script src="../public/js/jquery.bootstrap.wizard.min.js"></script>
+
+<!--  Bootstrap Table Plugin    -->
+<script src="../public/js/bootstrap-table.js"></script>
+
+<!--  Plugin for DataTables.net  -->
+<script src="../public/js/jquery.datatables.js"></script>
+
+<!--  Full Calendar Plugin    -->
+<script src="../public/js/fullcalendar.min.js"></script>
+
+<!-- Light Bootstrap Dashboard Core javascript and methods -->
+<script src="../public/js/light-bootstrap-dashboard.js"></script>
+
+<!--   Sharrre Library    -->
+<script src="../public/js/jquery.sharrre.js"></script>
+
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../public/js/demo.js"></script>
+
+<!--日期选择器-->
+<script type="text/javascript">
+    $().ready(function () {
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 1,
+            format: 'YYYY-MM-DD h:mm A'
+        }, function (start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+    });
+</script>
+
+<script>
+    var $table = $('#bootstrap-table');
+    var monitorHost = $('#monitorHost').val();
+    var kibanaHost = $('#kibanaHost').val();
+    $().ready(function () {
+        var taskId = $("#taskId").val().trim();
+        var taskStatus = $("#taskStatus").val().trim();
+        var account = $("#account").val().trim();
+        var appId = $("#appId").val().trim();
+        var nodeTask = $("#nodeTask").val().trim();
+        var channel = $("#channel").val().trim();
+        var reservation = $("#reservationtime").val();
+        setInterval(getTaskList(taskId, taskStatus, account, appId, nodeTask, channel, reservation), 10000);
+    });
+
+    $("#searchBtn").off().on("click", function () {
+        $table.bootstrapTable('destroy');//销毁上一次table对象，解决数据渲染混乱问题
+        var taskId = $("#taskId").val().trim();
+        var taskStatus = $("#taskStatus").val().trim();
+        var account = $("#account").val().trim();
+        var appId = $("#appId").val().trim();
+        var nodeTask = $("#nodeTask").val().trim();
+        var channel = $("#channel").val().trim();
+        var reservation = $("#reservationtime").val();
+        getTaskList(taskId, taskStatus, account, appId, nodeTask, channel, reservation);
+    });
+
+    $("#resetBtn").off().on("click", function () {
+        $("#taskId").val("");
+        $("#workerType").val("");
+        $("#account").val("");
+        $("#appId").val("");
+        $("#nodeTask").val("");
+        $("#channel").val("");
+        $("#reservationtime").val("");
+    });
+
+    function updateStats() {
+        $table.bootstrapTable('refresh', {silent: true});
+    }
+
+    function getTaskList(taskId, taskStatus, account, appId, nodeTask, channel, reservation) {
+        var url = monitorHost + "monitor/metrics/taskList";
+        $table.bootstrapTable({
+            url: url,
+            queryParams: function (params) {
+                return {
+                    pageNumber: params.offset,
+                    pageSize: params.limit,
+                    taskId: taskId,
+                    status: taskStatus,
+                    account: account,
+                    appId: appId,
+                    nodeTask: nodeTask,
+                    channel: channel,
+                    reservation: reservation
+                };
+            },
+            columns: [{
+                field: 'number',
+                title: '',
+                formatter: function (value, row, index) {
+                    var page = $table.bootstrapTable("getPage");
+                    return '<font color="#808080">' + (page.pageSize * (page.pageNumber - 1) + index + 1) + '</font>';
+                }
+            }, {
+                field: 'tid',
+                title: '任务ID',
+                sortable: true,
+                formatter: function (value, row, index) {
+                    let groupId = 'ucl_spider';
+                    if(row.appId === 'accdetect'){
+                        groupId = 'paris_accdetect_crawler';
+                    }else if(row.appId.indexOf('credit')>-1||row.appId.indexOf('debit')>-1){
+                        groupId = 'paris_onlineBank_crawler';
+                    }
+                    url = kibanaHost+"/app/kibana#/discover?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:now-15m,mode:quick,to:now))&_a=(columns:!(_source),index:%27"+groupId+"-*%27,interval:auto,query:(query_string:(analyze_wildcard:!t,query:%27*" + row.tid + "%27)),sort:!(%27@timestamp%27,desc))";
+                    return '<a target="_blank" href=' + url + ' style="color: black"><strong>' + value + '</strong></a>'
+                }
+            }, {
+                field: 'appId',
+                title: '平台ID',
+                sortable: true,
+            }, {
+                field: 'appName',
+                title: '平台名称',
+                sortable: true,
+            }, {
+                field: 'account',
+                title: '账号',
+                sortable: true,
+            }, {
+                field: 'nodeTask',
+                title: '任务节点',
+                sortable: true,
+            }, {
+                field: 'currentChannel',
+                title: '当前通道',
+                sortable: true,
+            }, {
+                field: 'status',
+                title: '状态',
+                sortable: true,
+                formatter: function (value, row, index) {
+                    if (row.status == "new") {
+                        return '<strong>新建</strong>';
+                    }
+                    else if (row.status == "processing") {
+                        return '<strong>进行中</strong>';
+                    }
+                    else if (row.status == "pending") {
+                        return '<strong>等待补充信息</strong>';
+                    }
+                    else if (row.status == "failed") {
+                        return '<strong>失败</strong>';
+                    }
+                    else if (row.status == "done") {
+                        return '<strong>完成</strong>';
+                    } else {
+                        return value
+                    }
+                },
+            }, {
+                field: 'ip',
+                title: '调用方IP地址',
+                sortable: true,
+            }, {
+                field: 'statusData',
+                title: '提示信息',
+                sortable: true,
+                formatter: 'dataFormaterByMessage'
+            }, {
+                field: 'statusData',
+                title: '补充信息',
+                sortable: true,
+                formatter: 'dataFromaterByRequire'
+            }, {
+                title: 'Log'
+            }, {
+                field: 'createdAt',
+                title: '开始时间',
+                sortable: true
+            }, {
+                field: 'updatedAt',
+                title: '结束时间',
+                sortable: true
+            }],
+            rowStyle: function (row, index) {
+                var strclass = "";
+                if (row.status == "new") {
+                    strclass = 'success';
+                }
+                else if (row.status == "processing") {
+                    strclass = 'info';
+                }
+                else if (row.status == "pending") {
+                    strclass = 'warning';
+                }
+                else if (row.status == "failed") {
+                    strclass = 'danger';
+                }
+                else if (row.status == "done") {
+
+                } else {
+                }
+                return {classes: strclass}
+            },
+            toolbar: ".toolbar",
+            showRefresh: false,
+            search: false,
+            showToggle: false,
+            showColumns: true,
+            sidePagination: "server",
+            pagination: true,
+            searchAlign: 'left',
+            data_local: "zh-US",
+            pageSize: 10,
+            clickToSelect: false,
+            pageList: [10, 20, 50, 100, 200],
+            showRefresh: true,
+            formatShowingRows: function (pageFrom, pageTo, totalRows) {
+                return "共 <strong>" + totalRows + "</strong> 条 记 录    "
+            },
+            formatRecordsPerPage: function (pageNumber) {
+                return pageNumber + " 条 / 页";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+        //activate the tooltips after the data table is initialized
+        $('[rel="tooltip"]').tooltip();
+
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+        });
+    }
+
+    function dataFormaterByMessage(value, row, index) {
+        if (value && ("message" in value)) {
+            return value.message
+        }
+    }
+
+    function dataFromaterByRequire(value, row, index) {
+        if (value && ("require" in value)) {
+            return JSON.stringify(value.require)
+        }
+    }
+
+    function loginOut(){
+        var url = monitorHost + "monitor/login";
+        window.location.href = url;
+    }
+</script>
+</html>

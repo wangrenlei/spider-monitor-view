@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>XX爬虫监控平台</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="XX爬虫监控平台" />
+
+
+
+    <!--  Social tags      -->
+    <meta name="keywords" content="XX爬虫监控平台">
+
+    <meta name="description" content="XX爬虫监控平台">
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="XX爬虫监控平台">
+    <meta itemprop="description" content="XX爬虫监控平台">
+
+
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="XX爬虫监控平台" />
+    <meta property="og:type" content="XX爬虫监控平台" />
+
+    <meta property="og:description" content="XX爬虫监控平台" />
+    <meta property="og:site_name" content="XX爬虫监控平台" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="../public/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--  Light Bootstrap Dashboard core CSS    -->
+    <link href="../public/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="../public/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="../public/css/font-awesome.min.css" rel="stylesheet">
+    <link href='../public/css/685fd913f1e14aebad0cc9d3713ee469.css' rel='stylesheet' type='text/css'>
+    <link href="../public/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="orange" data-image="../../assets/img/full-screen-image-3.jpg">
+        <div class="sidebar-wrapper">
+            <div class="user">
+                <div class="photo">
+                    <img src="../public/picture/default-avatar.png"/>
+                </div>
+            </div>
+
+            <ul class="nav">
+
+                <li>
+                    <a href="taskList.html">
+                        <i class="pe-7s-albums"></i>
+                        <p>任务列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="workerList.html">
+                        <i class="pe-7s-refresh-2"></i>
+                        <p>worker列表</p>
+                    </a>
+                </li>
+
+                <li class="active">
+                    <a href="workerRunningList.html">
+                        <i class="pe-7s-next"></i>
+                        <p>worker运行列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#tablesExamples1">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>app支持列表
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="tablesExamples1">
+                        <ul class="nav">
+                            <li><a href="#"> 淘宝</a></li>
+                            <li><a href="#"> 拼多多</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="apiReportList.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>api监控统计</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="capacha.html">
+                        <i class="pe-7s-camera"></i>
+                        <p>验证码服务</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#proxyExamples">
+                        <i class="pe-7s-disk"></i>
+                        <p>代理服务
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="proxyExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 西刺代理</a></li>
+                            <li><a href="#"> 阿里代理</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-volume"></i>
+                        <p>预警通知列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ucloud.html">
+                        <i class="pe-7s-network"></i>
+                        <p>vhost列表</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a data-toggle="collapse" href="#componentsExamples">
+                        <i class="pe-7s-add-user"></i>
+                        <p>用户管理
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="componentsExamples">
+                        <ul class="nav">
+                            <li><a href="#"> 用户模块</a></li>
+                            <li><a href="#"> 用户监控</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-minimize">
+                    <button id="minimizeSidebar" class="btn btn-warning btn-fill btn-round btn-icon">
+                        <i class="fa fa-ellipsis-v visible-on-sidebar-regular"></i>
+                        <i class="fa fa-navicon visible-on-sidebar-mini"></i>
+                    </button>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">worker运行列表</a>
+                </div>
+                <div class="collapse navbar-collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown dropdown-with-icons">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-list"></i>
+                                <p class="hidden-md hidden-lg">
+                                    更多
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu dropdown-with-icons">
+                                <li>
+                                    <a href="#" onclick="loginOut()" class="text-danger">
+                                        <i class="pe-7s-close-circle"></i>
+                                        登出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="row" style="padding-top: 10px;">
+                                <div class="col-xs-12">
+                                    <div class="col-xs-3">
+                                        <input type="text"  class="form-control" id="ipAddress" placeholder="请输入IP地址"/>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <input type="text" class="form-control" id="workerType" placeholder="请输入worker类型"/>
+                                    </div>
+                                    <div class="col-xs-2" style="float: right">
+                                        <button class="btn btn-fill" id="searchBtn" >查询</button>
+                                        <button class="btn btn-Default" id="resetBtn">重置</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br /><br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="toolbar">
+                                <!--        Here you can write extra buttons/actions for the toolbar              -->
+                            </div>
+                            <input type="hidden" id="monitorHost" value=<%= MONITOR_HOST %>
+                            <table id="bootstrap-table" class="table table-striped table-no-bordered table-hover">
+                                <thead>
+                                <th data-field="state"></th>
+                                <th data-field="tid" data-sortable="true">任务ID</th>
+                                <th data-field="ip" data-sortable="true">IP地址</th>
+                                <th data-field="account" data-sortable="true">账号</th>
+                                <th data-field="type" data-sortable="true">worker类型</th>
+                                <th data-field="startTime" data-sortable="true">开始时间</th>
+                                <th data-field="operate" data-sortable="true">操作</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div><!--  end card  -->
+                    </div> <!-- end col-md-12 -->
+                </div> <!-- end row -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<!--   Core JS Files and PerfectScrollbar library inside jquery.ui   -->
+<script src="../public/js/jquery.min.js" type="text/javascript"></script>
+<script src="../public/js/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../public/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<!--  Forms Validations Plugin -->
+<script src="../public/js/jquery.validate.min.js"></script>
+
+<!--  Plugin for Date Time Picker and Full Calendar Plugin-->
+<script src="../public/js/moment.min.js"></script>
+
+<!--  Date Time Picker Plugin is included in this js file -->
+<script src="../public/js/bootstrap-datetimepicker.js"></script>
+
+<!--  Select Picker Plugin -->
+<script src="../public/js/bootstrap-selectpicker.js"></script>
+
+<!--  Checkbox, Radio, Switch and Tags Input Plugins -->
+<script src="../public/js/bootstrap-checkbox-radio-switch-tags.js"></script>
+
+<!--  Charts Plugin -->
+<script src="../public/js/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="../public/js/bootstrap-notify.js"></script>
+
+<!-- Sweet Alert 2 plugin -->
+<script src="../public/js/sweetalert2.js"></script>
+
+<!-- Vector Map plugin -->
+<script src="../public/js/jquery-jvectormap.js"></script>
+
+<!--  Google Maps Plugin    -->
+<script src="../public/js/aa743e8f448a4792bad10d201a7080f6.js"></script>
+
+<!-- Wizard Plugin    -->
+<script src="../public/js/jquery.bootstrap.wizard.min.js"></script>
+
+<!--  Bootstrap Table Plugin    -->
+<script src="../public/js/bootstrap-table.js"></script>
+
+<!--  Plugin for DataTables.net  -->
+<script src="../public/js/jquery.datatables.js"></script>
+
+<!--  Full Calendar Plugin    -->
+<script src="../public/js/fullcalendar.min.js"></script>
+
+<!-- Light Bootstrap Dashboard Core javascript and methods -->
+<script src="../public/js/light-bootstrap-dashboard.js"></script>
+
+<!--   Sharrre Library    -->
+<script src="../public/js/jquery.sharrre.js"></script>
+
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../public/js/demo.js"></script>
+
+<script type="text/javascript">
+    var $table = $('#bootstrap-table');
+
+    function operateFormatter(value, row, index) {
+        return [
+            '<a rel="tooltip" title="编辑" class="btn btn-simple btn-warning btn-icon table-action edit" href="javascript:void(0)">',
+            '<i class="fa fa-edit"></i>',
+            '</a>',
+            '<a rel="tooltip" title="删除" class="btn btn-simple btn-danger btn-icon table-action remove" href="javascript:void(0)">',
+            '<i class="fa fa-remove"></i>',
+            '</a>'
+
+        ].join('');
+    }
+
+    $().ready(function () {
+        window.operateEvents = {};
+
+        $table.bootstrapTable({
+            toolbar: ".toolbar",
+            clickToSelect: true,
+            showRefresh: false,
+            search: false,
+            showToggle: false,
+            showColumns: false,
+            pagination: true,
+            searchAlign: 'left',
+            pageSize: 10,
+            clickToSelect: false,
+            pageList: [10, 20, 30, 50, 100],
+
+            formatShowingRows: function (pageFrom, pageTo, totalRows) {
+                return "共 <strong>" + totalRows + "</strong> 条 记 录    "
+            },
+            formatRecordsPerPage: function (pageNumber) {
+                return pageNumber + " 条 / 页";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+
+        //activate the tooltips after the data table is initialized
+        $('[rel="tooltip"]').tooltip();
+
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    var monitorHost = $('#monitorHost').val();
+    $().ready(function () {
+        getTaskList();
+        setInterval("getTaskList()", 5000);
+        $("#searchBtn").off().on("click",function(){
+            var ipAddress = $("#ipAddress").val().trim();
+            var workerType = $("#workerType").val().trim();
+            if(!ipAddress){
+                alert('请输入正确的ip地址');
+                return;
+            }
+            if(!workerType){
+                alert('请输入正确的worker类型');
+                return;
+            }
+            getTaskList();
+        });
+        $("#resetBtn").off().on("click",function(){
+            $("#ipAddress").val("");
+            $("#workerType").val("");
+        });
+    });
+
+    function getTaskList() {
+        var url = monitorHost+"monitor/metrics/workerRunning";
+        var ipAddress = $("#ipAddress").val();
+        var workerType = $("#workerType").val();
+        if(ipAddress&&workerType){
+            if(ipAddress.trim()!=''&&workerType.trim()!=''){
+                url += '?ip='+ipAddress.trim()+'&type='+workerType.trim();
+            }
+        }
+        $.ajax({
+            type: "get",
+            async: true,
+            dataTypt: 'json',
+            cache: 'false',
+            url: url,
+            timeout: 10000,
+            success: function (datas) {
+                if(datas.length>0){
+                    component(datas);
+                }
+            },
+            error: function () {
+                swal({
+                    showConfirmButton: false,
+                    title: "接口出错了！",
+                    type: "error",
+                });
+            }
+        });
+    }
+
+    function component(tableData) {
+        var tableHtml = ''
+        var middle = ''
+        for (var i = 0; i < tableData.length; i++) {
+            var targetUrl = monitorHost+'monitor/metrics/removeWorkerRunning?ip='+tableData[i].ip+'&type='+tableData[i].type+'&tid='+tableData[i].tid;
+            middle = '<tr>\n' +
+                '                                    <td><font color="#808080">'+(i+1)+'</font></td>\n' +
+                '                                    <td id="tid"><strong>' + tableData[i].tid + '</strong></td>\n' +
+                '                                    <td id="ip">' + tableData[i].ip + '</td>\n' +
+                '                                    <td id="account">' + tableData[i].account + '</td>\n' +
+                '                                    <td id="workerType">' + tableData[i].type + '</td>\n' +
+                '                                    <td id="startTime">' + tableData[i].startTime + '</td>' +
+                '                                    <td id="oprate"><button type="button" class="btn btn-danger btn-fill btn-round btn-icon" onclick=workerRunningOption("' + targetUrl+'")>\n' +
+                '                                        移除</button></td>' +
+                '</tr>\n'
+
+            tableHtml += middle;
+        }
+        $("tbody").html(tableHtml);
+    }
+
+    function workerRunningOption(targetUrl) {
+        $.ajax({
+            type: "get",
+            async: true,
+            cache: 'false',
+            url: targetUrl,
+            timeout: 10000,
+            success: function (datas) {
+                swal({
+                    showConfirmButton: false,
+                    title: "操作成功！",
+                    type: "success",
+                });
+            },
+            error: function () {
+                swal({
+                    showConfirmButton: false,
+                    title: "任务操作'+option+'接口出错了！",
+                    type: "error",
+                });
+            }
+        });
+    }
+
+    function loginOut() {
+        var url = monitorHost + "monitor/login";
+        window.location.href = url;
+    }
+</script>
+
+</html>
